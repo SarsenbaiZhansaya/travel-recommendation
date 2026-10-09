@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelBloom | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="travel_recommendation.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <a class="logo" href="index.html">✈ TravelBloom</a>
+
+    <div class="nav-links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <form id="search-form" class="search-box" role="search">
+      <input
+        id="search-input"
+        type="search"
+        placeholder="Enter a destination or keyword"
+        aria-label="Search destinations"
+      >
+      <button type="submit">Search</button>
+      <button id="clear-button" type="button">Clear</button>
+    </form>
+  </nav>
+
+  <main class="home-layout">
+    <section class="hero">
+      <p class="eyebrow">YOUR NEXT ADVENTURE STARTS HERE</p>
+
+      <h1>Explore<br>Dream<br>Discover</h1>
+
+      <p>
+        Discover beautiful beaches, ancient temples and exciting
+        cities around the world. TravelBloom helps you find
+        destinations for your next unforgettable journey.
+      </p>
+
+      <p class="search-hint">
+        Try searching for beach, temple, country,
+        Australia, Japan or Brazil.
+      </p>
+
+      <a class="primary-button" href="contact.html">Book Now</a>
+    </section>
+
+    <section
+      id="results"
+      class="results"
+      aria-label="Travel recommendations"
+      aria-live="polite"
+    ></section>
+  </main>
+
+  <footer>
+    <p>© 2026 TravelBloom. Explore the world with us.</p>
+  </footer>
+</body>
+</html>
