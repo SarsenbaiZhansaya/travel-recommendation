@@ -1,4 +1,3 @@
-// Each destination has a name, description and image.
 const recommendations = {
   beaches: [
     {
@@ -23,7 +22,7 @@ const recommendations = {
       description:
         "Explore a historic temple complex known for its remarkable Khmer architecture.",
       image:
-        "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1606231140504-b6ec6cbbbf6b?auto=format&fit=crop&w=800&q=80"
     },
     {
       name: "Kyoto Temples, Japan",
@@ -86,7 +85,6 @@ const recommendations = {
   ]
 };
 
-// Connect JavaScript to the elements in index.html.
 const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search-input");
 const clearButton = document.getElementById("clear-button");
@@ -126,7 +124,6 @@ function searchDestinations(event) {
   event.preventDefault();
   results.replaceChildren();
 
-  // Ignore capital letters and spaces around the keyword.
   const keyword = searchInput.value.trim().toLowerCase();
 
   if (!keyword) {
@@ -151,7 +148,6 @@ function searchDestinations(event) {
   ) {
     matches = recommendations[keyword];
   } else {
-    // Also allow searches for cities or destination names.
     matches = Object.values(recommendations)
       .flat()
       .filter(function (destination) {
